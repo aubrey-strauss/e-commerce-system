@@ -14,15 +14,15 @@ The list comes back as an object with the products inside a `products` array.
 
 ## Fields I'll use from each product:
 
-| Field, type, why it's needed:
+ Field, type, why it's needed:
 
-| `id`, number, track and manage each item
-| `title`, string, name of item used when displaying product details
-| `description`, string, describes what the item is for
-| `category`, string, checking the item to see what tax rate to apply
-| `price`, number, price of items, needed to calculate discount
-| `discountPercentage`, number, used to calculate total savings
-| `stock`, number, shows available quantity to know if it is sold out or not
+- `id`, number, track and manage each item
+- `title`, string, name of item used when displaying product details
+- `description`, string, describes what the item is for
+- `category`, string, checking the item to see what tax rate to apply
+- `price`, number, price of items, needed to calculate discount
+- `discountPercentage`, number, used to calculate total savings
+- `stock`, number, shows available quantity to know if it is sold out or not
 
 ## What each file does
 
@@ -46,6 +46,4 @@ The list comes back as an object with the products inside a `products` array.
 
 ## How I'll handle errors
 
-___
-<!-- Hint: what could go wrong? Think: the internet is down, the API sends back an error, a product is missing a field. -->
-
+- Create custom error rules
