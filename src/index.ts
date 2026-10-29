@@ -9,7 +9,7 @@ async function main(): Promise<void> {
 
     // Use asynchronous functions to fetch product data and display it.
     for (const data of productList.slice(0, 5)) {
-            // Create instances of Product by fetching product data from the API.
+        // Create instances of Product by fetching product data from the API.
         const product = new Product(data);
         product.displayDetails();
 
@@ -19,6 +19,17 @@ async function main(): Promise<void> {
 
         console.log("Sale price: $" + salePrice);
         console.log("Tax: $" + tax);
+        console.log("");
+    }
+
+    // Add grocery item to display the difference in tax
+    // Checked DummyJSON for a grocery item number (16)
+    const groceryData = await fetchProductById(16);
+    if (groceryData !== null) {
+        const grocery = new Product(groceryData);
+        grocery.displayDetails();
+        console.log("Sale price: $" + grocery.getPriceWithDiscount());
+        console.log("Tax (groceries 3%): $" + calculateTax(grocery.getPriceWithDiscount(), grocery.category));
         console.log("");
     }
 
