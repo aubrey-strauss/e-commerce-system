@@ -37,6 +37,6 @@ export async function fetchProductById(id: number): Promise<ProductData | null> 
         return null;
     }
 }
-}
+
 
 
